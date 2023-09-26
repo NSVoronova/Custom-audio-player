@@ -1,0 +1,208 @@
+*,body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  height: 100vh;
+  box-shadow: inset 0 10px 10px rgba(0, 0, 0);
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; 
+  background-repeat: inherit; 
+  background-size: inherit; 
+  filter: blur(10px);
+  z-index: 0;
+}
+
+body {
+  overflow: hidden;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  z-index: 4;
+  height: 50px;
+  width: 100%;
+  background-color: #000000;
+}
+footer a, span {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+#course-img {
+  filter: invert(1);
+  width: 100px;
+}
+#course-img:hover {
+  filter: invert(0.8);
+}
+footer a:hover {
+  color: rgba(255, 255, 255, 0.671)
+}
+
+.container {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250pt;
+  height: 285pt;
+  z-index: 3;
+  filter: none;
+  box-shadow: 0 0 10px #000000;
+  border-radius: 10px;
+}
+
+.music-player {
+  position: relative;
+  height: 0%;
+}
+
+.track-info {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+#track-image {
+  position: relative;
+  top: -30px;
+  display: block;
+  transform: scale(1);
+  max-width: 335px;
+  height: 330px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+
+.song-description {
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  top: 250px;
+  background: linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px 20px;
+}
+
+.controls button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+.controls button img {
+  width: 25px;
+}
+
+
+#pause-song {
+  display: none;
+}
+.controls button img {
+  filter: invert(1);
+}
+.controls button img:hover {
+  filter: invert(0.8);
+}
+
+#pause-song img, #play-song img {
+  width: 50px;
+}
+
+.name-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.prev-next {
+  display: flex;
+  flex-direction: column;
+}
+.prev-next button img{
+  width: 30px;
+}
+
+#current-track {
+  color: rgb(193, 255, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+}
+
+#current-song {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.progress-container {
+  margin: 0 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+#total-time {
+  text-align: right;
+  color: rgb(193, 255, 6);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+#current-time {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 6px;
+    height: 10px;
+    background-color: rgb(193, 255, 6);
+    border: none;
+    border-radius: 50%;
+    margin-top: 0px;
+    /* background-size: 0% 100%; */
+  }
+}

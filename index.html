@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Audio Player</title>
+</head>
+<div class="wrapper">
+  <div class="container">
+    <div class="music-player">
+      <audio id="audio-player">
+        <source src="./audio/beyonce.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="track-info">
+        <img id="track-image" src="./images/lemonade.png" alt="Track 1 Image">
+      </div>
+      <div class="song-description">
+        <div class="controls">
+          <div class="name-buttons">
+            <button id="play-song"><img src="./icons/play.png" alt="play"></button>
+            <button id="pause-song"><img src="./icons/pause.png" alt="pause"></button>
+            <div class="name-song">
+              <h1> <span id="current-track">Track 1</span></h1>
+              <h2><span id="current-song">Song 1</span></h2>
+            </div>
+            <div class="prev-next">
+              <button id="prev-button"><img src="./icons/backward.png" alt="#"></button>
+              <button id="next-button"><img src="./icons/forward.png" alt=""></button>
+            </div>
+          </div>
+          <div class="progress-container">
+            <span id="total-time">0:00</span>
+            <input type="range" id="progress-bar" max="100" value="0" min="0" step="1" style="background-size: 0% 100%;">
+            <span id="current-time">0:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <a href="http://github.com/NSVoronova">NSVoronova</a>
+  <span>2023</span>
+  <a href="https://rs.school/js-stage0/"><img id="course-img" src="./icons/rs_school_js.svg" alt="#"></a>
+</footer>
+<script src="./index.js"></script>
+</body>
+
+</html>
